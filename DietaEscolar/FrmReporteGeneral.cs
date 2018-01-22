@@ -29,7 +29,7 @@ namespace DietaEscolar
             conn.ConnectionString = ConnectionString;
             conn.Open();
 
-            string consulta = "SELECT `nombre`, `dia_semana`, `nro_dias`, `nivel`, `estado`, `fecha` FROM `vista_planeacion` ORDER BY FIELD (`nivel`, 'INICIAL Y PRIMARIA', 'SECUNDARIA', 'ALTERNATIVA Y CONVENIO')";
+            string consulta = "SELECT `nombre`, `dia_semana`, `nro_dias`, `nivel`, `estado`, `fecha` FROM `vista_planeacion` ORDER BY FIELD (`dia_semana`, 'LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES'), FIELD (`nivel`, 'INICIAL Y PRIMARIA', 'SECUNDARIA', 'ALTERNATIVA Y CONVENIO')";
 
             MySqlCommand cmd = new MySqlCommand();
             MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, ConnectionString);
