@@ -30,8 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
+            this.toolStrip = new System.Windows.Forms.ToolStrip();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.ItemsBtn = new System.Windows.Forms.ToolStripButton();
+            this.UsuariosBtn = new System.Windows.Forms.ToolStripButton();
+            this.StockBtn = new System.Windows.Forms.ToolStripButton();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.planeacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.inicialYPrimariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -48,17 +59,6 @@
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.ItemsBtn = new System.Windows.Forms.ToolStripButton();
-            this.UsuariosBtn = new System.Windows.Forms.ToolStripButton();
-            this.StockBtn = new System.Windows.Forms.ToolStripButton();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.planeacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -79,157 +79,6 @@
             this.menuStrip.Size = new System.Drawing.Size(632, 24);
             this.menuStrip.TabIndex = 0;
             this.menuStrip.Text = "MenuStrip";
-            // 
-            // fileMenu
-            // 
-            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
-            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
-            this.fileMenu.Name = "fileMenu";
-            this.fileMenu.Size = new System.Drawing.Size(60, 20);
-            this.fileMenu.Text = "&Archivo";
-            // 
-            // operacionesMenu
-            // 
-            this.operacionesMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.usuariosToolStripMenuItem,
-            this.itemsToolStripMenuItem,
-            this.planeacionToolStripMenuItem});
-            this.operacionesMenu.Name = "operacionesMenu";
-            this.operacionesMenu.Size = new System.Drawing.Size(85, 20);
-            this.operacionesMenu.Text = "&Operaciones";
-            // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.generalToolStripMenuItem,
-            this.inicialYPrimariaToolStripMenuItem,
-            this.secundariaToolStripMenuItem,
-            this.alternativaYConvenioToolStripMenuItem});
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "&Reportes";
-            // 
-            // generalToolStripMenuItem
-            // 
-            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.generalToolStripMenuItem.Text = "&General";
-            this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
-            // 
-            // inicialYPrimariaToolStripMenuItem
-            // 
-            this.inicialYPrimariaToolStripMenuItem.Name = "inicialYPrimariaToolStripMenuItem";
-            this.inicialYPrimariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
-            this.inicialYPrimariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.inicialYPrimariaToolStripMenuItem.Text = "&Inicial y Primaria";
-            this.inicialYPrimariaToolStripMenuItem.Click += new System.EventHandler(this.inicialYPrimariaToolStripMenuItem_Click);
-            // 
-            // secundariaToolStripMenuItem
-            // 
-            this.secundariaToolStripMenuItem.Name = "secundariaToolStripMenuItem";
-            this.secundariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
-            this.secundariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.secundariaToolStripMenuItem.Text = "&Secundaria";
-            this.secundariaToolStripMenuItem.Click += new System.EventHandler(this.secundariaToolStripMenuItem_Click);
-            // 
-            // alternativaYConvenioToolStripMenuItem
-            // 
-            this.alternativaYConvenioToolStripMenuItem.Name = "alternativaYConvenioToolStripMenuItem";
-            this.alternativaYConvenioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D4)));
-            this.alternativaYConvenioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
-            this.alternativaYConvenioToolStripMenuItem.Text = "&Alternativa y Convenio";
-            this.alternativaYConvenioToolStripMenuItem.Click += new System.EventHandler(this.alternativaYConvenioToolStripMenuItem_Click);
-            // 
-            // viewMenu
-            // 
-            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolBarToolStripMenuItem,
-            this.statusBarToolStripMenuItem});
-            this.viewMenu.Name = "viewMenu";
-            this.viewMenu.Size = new System.Drawing.Size(35, 20);
-            this.viewMenu.Text = "&Ver";
-            // 
-            // toolBarToolStripMenuItem
-            // 
-            this.toolBarToolStripMenuItem.Checked = true;
-            this.toolBarToolStripMenuItem.CheckOnClick = true;
-            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
-            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.toolBarToolStripMenuItem.Text = "&Barra de herramientas";
-            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
-            // 
-            // statusBarToolStripMenuItem
-            // 
-            this.statusBarToolStripMenuItem.Checked = true;
-            this.statusBarToolStripMenuItem.CheckOnClick = true;
-            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
-            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
-            this.statusBarToolStripMenuItem.Text = "&Barra de estado";
-            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
-            // 
-            // windowsMenu
-            // 
-            this.windowsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cascadeToolStripMenuItem,
-            this.tileVerticalToolStripMenuItem,
-            this.tileHorizontalToolStripMenuItem,
-            this.closeAllToolStripMenuItem});
-            this.windowsMenu.Name = "windowsMenu";
-            this.windowsMenu.Size = new System.Drawing.Size(66, 20);
-            this.windowsMenu.Text = "&Ventanas";
-            // 
-            // cascadeToolStripMenuItem
-            // 
-            this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
-            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.cascadeToolStripMenuItem.Text = "&Cascada";
-            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
-            // 
-            // tileVerticalToolStripMenuItem
-            // 
-            this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
-            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.tileVerticalToolStripMenuItem.Text = "Mosaico &vertical";
-            this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
-            // 
-            // tileHorizontalToolStripMenuItem
-            // 
-            this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
-            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.tileHorizontalToolStripMenuItem.Text = "Mosaico &horizontal";
-            this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
-            // 
-            // closeAllToolStripMenuItem
-            // 
-            this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
-            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.closeAllToolStripMenuItem.Text = "C&errar todo";
-            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
-            // 
-            // helpMenu
-            // 
-            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ayudaToolStripMenuItem,
-            this.aboutToolStripMenuItem});
-            this.helpMenu.Name = "helpMenu";
-            this.helpMenu.Size = new System.Drawing.Size(53, 20);
-            this.helpMenu.Text = "Ay&uda";
-            // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
             // 
             // toolStrip
             // 
@@ -289,6 +138,16 @@
             this.StockBtn.Text = "Stock de Items";
             this.StockBtn.Click += new System.EventHandler(this.StockBtn_Click);
             // 
+            // fileMenu
+            // 
+            this.fileMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileMenu.Image = global::DietaEscolar.Properties.Resources.folder;
+            this.fileMenu.ImageTransparentColor = System.Drawing.SystemColors.ActiveBorder;
+            this.fileMenu.Name = "fileMenu";
+            this.fileMenu.Size = new System.Drawing.Size(76, 20);
+            this.fileMenu.Text = "&Archivo";
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.exit__1_;
@@ -297,6 +156,17 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
+            // 
+            // operacionesMenu
+            // 
+            this.operacionesMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usuariosToolStripMenuItem,
+            this.itemsToolStripMenuItem,
+            this.planeacionToolStripMenuItem});
+            this.operacionesMenu.Image = global::DietaEscolar.Properties.Resources.database;
+            this.operacionesMenu.Name = "operacionesMenu";
+            this.operacionesMenu.Size = new System.Drawing.Size(101, 20);
+            this.operacionesMenu.Text = "&Operaciones";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -324,6 +194,150 @@
             this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.planeacionToolStripMenuItem.Text = "&Stock de Items";
             this.planeacionToolStripMenuItem.Click += new System.EventHandler(this.planeacionToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generalToolStripMenuItem,
+            this.inicialYPrimariaToolStripMenuItem,
+            this.secundariaToolStripMenuItem,
+            this.alternativaYConvenioToolStripMenuItem});
+            this.reportesToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.analytics;
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
+            this.reportesToolStripMenuItem.Text = "&Reportes";
+            // 
+            // generalToolStripMenuItem
+            // 
+            this.generalToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.analytics__1_;
+            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
+            this.generalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.generalToolStripMenuItem.Text = "&General";
+            this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
+            // 
+            // inicialYPrimariaToolStripMenuItem
+            // 
+            this.inicialYPrimariaToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.analytics__1_;
+            this.inicialYPrimariaToolStripMenuItem.Name = "inicialYPrimariaToolStripMenuItem";
+            this.inicialYPrimariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
+            this.inicialYPrimariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.inicialYPrimariaToolStripMenuItem.Text = "&Inicial y Primaria";
+            this.inicialYPrimariaToolStripMenuItem.Click += new System.EventHandler(this.inicialYPrimariaToolStripMenuItem_Click);
+            // 
+            // secundariaToolStripMenuItem
+            // 
+            this.secundariaToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.analytics__1_;
+            this.secundariaToolStripMenuItem.Name = "secundariaToolStripMenuItem";
+            this.secundariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.secundariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.secundariaToolStripMenuItem.Text = "&Secundaria";
+            this.secundariaToolStripMenuItem.Click += new System.EventHandler(this.secundariaToolStripMenuItem_Click);
+            // 
+            // alternativaYConvenioToolStripMenuItem
+            // 
+            this.alternativaYConvenioToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.analytics__1_;
+            this.alternativaYConvenioToolStripMenuItem.Name = "alternativaYConvenioToolStripMenuItem";
+            this.alternativaYConvenioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D4)));
+            this.alternativaYConvenioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.alternativaYConvenioToolStripMenuItem.Text = "&Alternativa y Convenio";
+            this.alternativaYConvenioToolStripMenuItem.Click += new System.EventHandler(this.alternativaYConvenioToolStripMenuItem_Click);
+            // 
+            // viewMenu
+            // 
+            this.viewMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolBarToolStripMenuItem,
+            this.statusBarToolStripMenuItem});
+            this.viewMenu.Image = global::DietaEscolar.Properties.Resources.binoculars;
+            this.viewMenu.Name = "viewMenu";
+            this.viewMenu.Size = new System.Drawing.Size(51, 20);
+            this.viewMenu.Text = "&Ver";
+            // 
+            // toolBarToolStripMenuItem
+            // 
+            this.toolBarToolStripMenuItem.Checked = true;
+            this.toolBarToolStripMenuItem.CheckOnClick = true;
+            this.toolBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolBarToolStripMenuItem.Name = "toolBarToolStripMenuItem";
+            this.toolBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.toolBarToolStripMenuItem.Text = "&Barra de herramientas";
+            this.toolBarToolStripMenuItem.Click += new System.EventHandler(this.ToolBarToolStripMenuItem_Click);
+            // 
+            // statusBarToolStripMenuItem
+            // 
+            this.statusBarToolStripMenuItem.Checked = true;
+            this.statusBarToolStripMenuItem.CheckOnClick = true;
+            this.statusBarToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.statusBarToolStripMenuItem.Name = "statusBarToolStripMenuItem";
+            this.statusBarToolStripMenuItem.Size = new System.Drawing.Size(189, 22);
+            this.statusBarToolStripMenuItem.Text = "&Barra de estado";
+            this.statusBarToolStripMenuItem.Click += new System.EventHandler(this.StatusBarToolStripMenuItem_Click);
+            // 
+            // windowsMenu
+            // 
+            this.windowsMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cascadeToolStripMenuItem,
+            this.tileVerticalToolStripMenuItem,
+            this.tileHorizontalToolStripMenuItem,
+            this.closeAllToolStripMenuItem});
+            this.windowsMenu.Image = global::DietaEscolar.Properties.Resources.windows;
+            this.windowsMenu.Name = "windowsMenu";
+            this.windowsMenu.Size = new System.Drawing.Size(82, 20);
+            this.windowsMenu.Text = "&Ventanas";
+            // 
+            // cascadeToolStripMenuItem
+            // 
+            this.cascadeToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.cascade_visualization_option_interface_button;
+            this.cascadeToolStripMenuItem.Name = "cascadeToolStripMenuItem";
+            this.cascadeToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.cascadeToolStripMenuItem.Text = "&Cascada";
+            this.cascadeToolStripMenuItem.Click += new System.EventHandler(this.CascadeToolStripMenuItem_Click);
+            // 
+            // tileVerticalToolStripMenuItem
+            // 
+            this.tileVerticalToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.tile;
+            this.tileVerticalToolStripMenuItem.Name = "tileVerticalToolStripMenuItem";
+            this.tileVerticalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.tileVerticalToolStripMenuItem.Text = "Mosaico &vertical";
+            this.tileVerticalToolStripMenuItem.Click += new System.EventHandler(this.TileVerticalToolStripMenuItem_Click);
+            // 
+            // tileHorizontalToolStripMenuItem
+            // 
+            this.tileHorizontalToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.tile__1_;
+            this.tileHorizontalToolStripMenuItem.Name = "tileHorizontalToolStripMenuItem";
+            this.tileHorizontalToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.tileHorizontalToolStripMenuItem.Text = "Mosaico &horizontal";
+            this.tileHorizontalToolStripMenuItem.Click += new System.EventHandler(this.TileHorizontalToolStripMenuItem_Click);
+            // 
+            // closeAllToolStripMenuItem
+            // 
+            this.closeAllToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.error;
+            this.closeAllToolStripMenuItem.Name = "closeAllToolStripMenuItem";
+            this.closeAllToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.closeAllToolStripMenuItem.Text = "C&errar todo";
+            this.closeAllToolStripMenuItem.Click += new System.EventHandler(this.CloseAllToolStripMenuItem_Click);
+            // 
+            // helpMenu
+            // 
+            this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ayudaToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.helpMenu.Image = global::DietaEscolar.Properties.Resources.info;
+            this.helpMenu.Name = "helpMenu";
+            this.helpMenu.Size = new System.Drawing.Size(69, 20);
+            this.helpMenu.Text = "Ay&uda";
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
+            this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
             // 
             // FrmPrincipal
             // 

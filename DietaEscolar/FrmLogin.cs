@@ -47,11 +47,13 @@ namespace DietaEscolar
                 try
                 {
                     int id = Convert.ToInt32(usersTableAdapter.Login(usuario, password));
+                    string nombre = usersTableAdapter.LoginNombre(usuario, password).ToString();
+
                     LimpiarControles();
 
                     if (id != 0)
                     {
-                        FrmPrincipal frm = new FrmPrincipal();
+                        FrmPrincipal frm = new FrmPrincipal(nombre);
                         Hide();
                         frm.ShowDialog();
                         Show();
@@ -65,7 +67,9 @@ namespace DietaEscolar
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Usuario o contraseña incorrectos\n\nIntente nuevamente", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtPassword.ResetText();
+                    txtPassword.Focus();
                 }
             }
         }

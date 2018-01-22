@@ -232,6 +232,19 @@
     <None Include="Resources\exit %281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\analytics.png" />
+    <None Include="Resources\binoculars.png" />
+    <None Include="Resources\windows.png" />
+    <None Include="Resources\cascade-visualization-option-interface-button.png" />
+    <None Include="Resources\tile.png" />
+    <None Include="Resources\tile %281%29.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\info.png" />
+    <None Include="Resources\curriculum.png" />
+    <None Include="Resources\analytics %281%29.png" />
+    <None Include="Resources\analytics %282%29.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

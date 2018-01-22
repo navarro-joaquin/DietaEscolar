@@ -17,6 +17,12 @@ namespace DietaEscolar
             InitializeComponent();
         }
 
+        public FrmPrincipal(string nombre_usuario)
+        {
+            InitializeComponent();
+            toolStripStatusLabel.Text = "..: BIENVENIDO " + nombre_usuario + " :..";
+        }
+
         //Funcionalidad del boton Salir en el menú Archivo
         private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
         {
