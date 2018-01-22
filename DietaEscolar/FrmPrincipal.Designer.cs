@@ -49,12 +49,16 @@
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.statusStrip = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.ItemsBtn = new System.Windows.Forms.ToolStripButton();
             this.UsuariosBtn = new System.Windows.Forms.ToolStripButton();
             this.StockBtn = new System.Windows.Forms.ToolStripButton();
+            this.statusStrip = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nivelInicialPrimariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nivelSecundariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nivelAlternativaYConvenioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -89,7 +93,7 @@
             // 
             this.exitToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.exit__1_;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -107,7 +111,7 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.man;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -115,7 +119,7 @@
             // 
             this.itemsToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.breakfast;
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
-            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.itemsToolStripMenuItem.Text = "&Items";
             this.itemsToolStripMenuItem.Click += new System.EventHandler(this.itemsToolStripMenuItem_Click);
             // 
@@ -123,12 +127,17 @@
             // 
             this.planeacionToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.warehouse;
             this.planeacionToolStripMenuItem.Name = "planeacionToolStripMenuItem";
-            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.planeacionToolStripMenuItem.Text = "&Stock de Items";
             this.planeacionToolStripMenuItem.Click += new System.EventHandler(this.planeacionToolStripMenuItem_Click);
             // 
             // reportesToolStripMenuItem
             // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generalToolStripMenuItem,
+            this.nivelInicialPrimariaToolStripMenuItem,
+            this.nivelSecundariaToolStripMenuItem,
+            this.nivelAlternativaYConvenioToolStripMenuItem});
             this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
             this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.reportesToolStripMenuItem.Text = "&Reportes";
@@ -234,22 +243,6 @@
             this.toolStrip.TabIndex = 1;
             this.toolStrip.Text = "ToolStrip";
             // 
-            // statusStrip
-            // 
-            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel});
-            this.statusStrip.Location = new System.Drawing.Point(0, 431);
-            this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(632, 22);
-            this.statusStrip.TabIndex = 2;
-            this.statusStrip.Text = "StatusStrip";
-            // 
-            // toolStripStatusLabel
-            // 
-            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
-            this.toolStripStatusLabel.Size = new System.Drawing.Size(90, 17);
-            this.toolStripStatusLabel.Text = "..: Bienvenido ::.";
-            // 
             // ItemsBtn
             // 
             this.ItemsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -279,6 +272,47 @@
             this.StockBtn.Size = new System.Drawing.Size(23, 22);
             this.StockBtn.Text = "Stock de Items";
             this.StockBtn.Click += new System.EventHandler(this.StockBtn_Click);
+            // 
+            // statusStrip
+            // 
+            this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel});
+            this.statusStrip.Location = new System.Drawing.Point(0, 431);
+            this.statusStrip.Name = "statusStrip";
+            this.statusStrip.Size = new System.Drawing.Size(632, 22);
+            this.statusStrip.TabIndex = 2;
+            this.statusStrip.Text = "StatusStrip";
+            // 
+            // toolStripStatusLabel
+            // 
+            this.toolStripStatusLabel.Name = "toolStripStatusLabel";
+            this.toolStripStatusLabel.Size = new System.Drawing.Size(90, 17);
+            this.toolStripStatusLabel.Text = "..: Bienvenido ::.";
+            // 
+            // generalToolStripMenuItem
+            // 
+            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
+            this.generalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F1)));
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.generalToolStripMenuItem.Text = "&General";
+            // 
+            // nivelInicialPrimariaToolStripMenuItem
+            // 
+            this.nivelInicialPrimariaToolStripMenuItem.Name = "nivelInicialPrimariaToolStripMenuItem";
+            this.nivelInicialPrimariaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.nivelInicialPrimariaToolStripMenuItem.Text = "&Inicial y Primaria";
+            // 
+            // nivelSecundariaToolStripMenuItem
+            // 
+            this.nivelSecundariaToolStripMenuItem.Name = "nivelSecundariaToolStripMenuItem";
+            this.nivelSecundariaToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.nivelSecundariaToolStripMenuItem.Text = "&Secundaria";
+            // 
+            // nivelAlternativaYConvenioToolStripMenuItem
+            // 
+            this.nivelAlternativaYConvenioToolStripMenuItem.Name = "nivelAlternativaYConvenioToolStripMenuItem";
+            this.nivelAlternativaYConvenioToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
+            this.nivelAlternativaYConvenioToolStripMenuItem.Text = "&Alternativa y Convenio";
             // 
             // FrmPrincipal
             // 
@@ -332,6 +366,10 @@
         private System.Windows.Forms.ToolStripButton ItemsBtn;
         private System.Windows.Forms.ToolStripButton UsuariosBtn;
         private System.Windows.Forms.ToolStripButton StockBtn;
+        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nivelInicialPrimariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nivelSecundariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nivelAlternativaYConvenioToolStripMenuItem;
     }
 }
 

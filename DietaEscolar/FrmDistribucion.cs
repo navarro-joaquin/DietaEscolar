@@ -14,15 +14,44 @@ namespace DietaEscolar
     {
         private bool Editar = false;
 
-        string dia_actual = DateTime.Now.DayOfWeek.ToString().ToUpper();
+        string dia_actual = DateTime.Now.DayOfWeek.ToString();
+        
 
         public FrmDistribucion()
         {
             InitializeComponent();
         }
 
+        private string ActualizarDiaSiguiente(string dia_bd)
+        {
+            string resultado = "";
+
+            switch(dia_bd)
+            {
+                case "LUNES":
+                    resultado = "MARTES";
+                    break;
+                case "MARTES":
+                    resultado = "MIERCOLES";
+                    break;
+                case "MIERCOLES":
+                    resultado = "JUEVES";
+                    break;
+                case "JUEVES":
+                    resultado = "VIERNES";
+                    break;
+                case "VIERNES":
+                    resultado = "LUNES";
+                    break;
+            }
+
+            return resultado;
+        }
+
         private void ActualizarStock()
         {
+            string diaBD = this.dia_actualTableAdapter.ObtenerDia();
+
             string dia = "DOMINGO";
 
             switch (dia_actual)
@@ -47,13 +76,23 @@ namespace DietaEscolar
                     break;
             }
 
-            try
+            if (dia.Equals(diaBD))
             {
-                this.planeacionTableAdapter.ActualizarStock(dia);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Se actualizará el stock de items", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                try
+                {
+                    this.planeacionTableAdapter.ActualizarStock(dia);
+                    diaBD = ActualizarDiaSiguiente(diaBD);
+                    this.dia_actualTableAdapter.ActualizarDia(diaBD);
+
+                    MessageBox.Show("Cambios del día " + dia + " completados", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    this.vista_planeacionTableAdapter.Fill(this.bd_acdDataSet.vista_planeacion);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
@@ -107,7 +146,7 @@ namespace DietaEscolar
             cmbBuscar.SelectedIndex = 0;
             txtId.ReadOnly = true;
 
-            MessageBox.Show(dia_actual);
+            ActualizarStock();
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)

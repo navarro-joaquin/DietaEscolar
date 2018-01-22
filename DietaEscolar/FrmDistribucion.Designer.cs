@@ -38,12 +38,20 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dgvStock = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vista_planeacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_acdDataSet = new DietaEscolar.bd_acdDataSet();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.vista_planeacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_acdDataSet = new DietaEscolar.bd_acdDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grbStock = new System.Windows.Forms.GroupBox();
             this.cmbNivel = new System.Windows.Forms.ComboBox();
@@ -59,15 +67,8 @@
             this.planeacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.itemsTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.itemsTableAdapter();
             this.vista_planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.vista_planeacionTableAdapter();
-            this.dgvStock = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.planeacionTableAdapter();
+            this.dia_actualTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.dia_actualTableAdapter();
             lblId = new System.Windows.Forms.Label();
             lblIdItem = new System.Windows.Forms.Label();
             lblNivel = new System.Windows.Forms.Label();
@@ -76,13 +77,13 @@
             lblEstado = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista_planeacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.grbStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planeacionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.SuspendLayout();
             // 
             // lblId
@@ -176,6 +177,93 @@
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // dgvStock
+            // 
+            this.dgvStock.AllowUserToAddRows = false;
+            this.dgvStock.AllowUserToDeleteRows = false;
+            this.dgvStock.AutoGenerateColumns = false;
+            this.dgvStock.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dgvStock.DataSource = this.vista_planeacionBindingSource;
+            this.dgvStock.Location = new System.Drawing.Point(6, 66);
+            this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
+            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStock.Size = new System.Drawing.Size(642, 220);
+            this.dgvStock.TabIndex = 13;
+            this.dgvStock.DoubleClick += new System.EventHandler(this.dgvStock_DoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nro";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Item";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 330;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "dia_semana";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Día";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 90;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "nro_dias";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Nro de Días";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "nivel";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Nivel";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "estado";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Estado";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 50;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fecha";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // vista_planeacionBindingSource
+            // 
+            this.vista_planeacionBindingSource.DataMember = "vista_planeacion";
+            this.vista_planeacionBindingSource.DataSource = this.bd_acdDataSet;
+            // 
+            // bd_acdDataSet
+            // 
+            this.bd_acdDataSet.DataSetName = "bd_acdDataSet";
+            this.bd_acdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cmbBuscar
             // 
             this.cmbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -227,16 +315,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(211, 21);
             this.txtBuscar.TabIndex = 11;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // vista_planeacionBindingSource
-            // 
-            this.vista_planeacionBindingSource.DataMember = "vista_planeacion";
-            this.vista_planeacionBindingSource.DataSource = this.bd_acdDataSet;
-            // 
-            // bd_acdDataSet
-            // 
-            this.bd_acdDataSet.DataSetName = "bd_acdDataSet";
-            this.bd_acdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tabPage2
             // 
@@ -372,6 +450,7 @@
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.Connection = null;
+            this.tableAdapterManager.dia_actualTableAdapter = null;
             this.tableAdapterManager.itemsTableAdapter = null;
             this.tableAdapterManager.planeacionTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
@@ -390,86 +469,13 @@
             // 
             this.vista_planeacionTableAdapter.ClearBeforeFill = true;
             // 
-            // dgvStock
-            // 
-            this.dgvStock.AllowUserToAddRows = false;
-            this.dgvStock.AllowUserToDeleteRows = false;
-            this.dgvStock.AutoGenerateColumns = false;
-            this.dgvStock.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7});
-            this.dgvStock.DataSource = this.vista_planeacionBindingSource;
-            this.dgvStock.Location = new System.Drawing.Point(6, 66);
-            this.dgvStock.Name = "dgvStock";
-            this.dgvStock.ReadOnly = true;
-            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(642, 220);
-            this.dgvStock.TabIndex = 13;
-            this.dgvStock.DoubleClick += new System.EventHandler(this.dgvStock_DoubleClick);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nro";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "nombre";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Item";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 330;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "dia_semana";
-            this.dataGridViewTextBoxColumn3.HeaderText = "Día";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 90;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "nro_dias";
-            this.dataGridViewTextBoxColumn4.HeaderText = "Nro de Días";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "nivel";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Nivel";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "estado";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Estado";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 50;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "fecha";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
             // planeacionTableAdapter
             // 
             this.planeacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // dia_actualTableAdapter
+            // 
+            this.dia_actualTableAdapter.ClearBeforeFill = true;
             // 
             // FrmDistribucion
             // 
@@ -486,6 +492,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista_planeacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -493,7 +500,6 @@
             this.grbStock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.planeacionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -534,5 +540,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private bd_acdDataSetTableAdapters.planeacionTableAdapter planeacionTableAdapter;
+        private bd_acdDataSetTableAdapters.dia_actualTableAdapter dia_actualTableAdapter;
     }
 }
