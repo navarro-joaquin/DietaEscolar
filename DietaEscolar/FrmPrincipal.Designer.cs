@@ -87,8 +87,9 @@
             // 
             // exitToolStripMenuItem
             // 
+            this.exitToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.exit__1_;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -104,22 +105,25 @@
             // 
             // usuariosToolStripMenuItem
             // 
+            this.usuariosToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.man;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // itemsToolStripMenuItem
             // 
+            this.itemsToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.breakfast;
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
-            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.itemsToolStripMenuItem.Text = "&Items";
             this.itemsToolStripMenuItem.Click += new System.EventHandler(this.itemsToolStripMenuItem_Click);
             // 
             // planeacionToolStripMenuItem
             // 
+            this.planeacionToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.warehouse;
             this.planeacionToolStripMenuItem.Name = "planeacionToolStripMenuItem";
-            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.planeacionToolStripMenuItem.Text = "&Stock de Items";
             this.planeacionToolStripMenuItem.Click += new System.EventHandler(this.planeacionToolStripMenuItem_Click);
             // 
