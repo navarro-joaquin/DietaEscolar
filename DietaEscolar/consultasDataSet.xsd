@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="consultasDataSet" targetNamespace="http://tempuri.org/consultasDataSet.xsd" xmlns:mstns="http://tempuri.org/consultasDataSet.xsd" xmlns="http://tempuri.org/consultasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="consultasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="consultasDataSet" msprop:Generator_UserDSName="consultasDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Busqueda" msprop:Generator_TableClassName="BusquedaDataTable" msprop:Generator_TableVarName="tableBusqueda" msprop:Generator_TablePropName="Busqueda" msprop:Generator_RowDeletingName="BusquedaRowDeleting" msprop:Generator_RowChangingName="BusquedaRowChanging" msprop:Generator_RowEvHandlerName="BusquedaRowChangeEventHandler" msprop:Generator_RowDeletedName="BusquedaRowDeleted" msprop:Generator_UserTableName="Busqueda" msprop:Generator_RowChangedName="BusquedaRowChanged" msprop:Generator_RowEvArgName="BusquedaRowChangeEvent" msprop:Generator_RowClassName="BusquedaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="dia_semana" msprop:Generator_ColumnVarNameInTable="columndia_semana" msprop:Generator_ColumnPropNameInRow="dia_semana" msprop:Generator_ColumnPropNameInTable="dia_semanaColumn" msprop:Generator_UserColumnName="dia_semana" type="xs:string" minOccurs="0" />
+              <xs:element name="nro_dias" msprop:Generator_ColumnVarNameInTable="columnnro_dias" msprop:Generator_ColumnPropNameInRow="nro_dias" msprop:Generator_ColumnPropNameInTable="nro_diasColumn" msprop:Generator_UserColumnName="nro_dias" type="xs:int" minOccurs="0" />
+              <xs:element name="nivel" msprop:Generator_ColumnVarNameInTable="columnnivel" msprop:Generator_ColumnPropNameInRow="nivel" msprop:Generator_ColumnPropNameInTable="nivelColumn" msprop:Generator_UserColumnName="nivel" type="xs:string" minOccurs="0" />
+              <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:int" minOccurs="0" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

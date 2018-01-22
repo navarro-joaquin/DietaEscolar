@@ -97,5 +97,12 @@ namespace DietaEscolar
         {
             planeacionToolStripMenuItem.PerformClick();
         }
+
+        private void generalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteGeneral reporteGeneral = new FrmReporteGeneral();
+            reporteGeneral.MdiParent = this;
+            reporteGeneral.Show();
+        }
     }
 }
