@@ -85,5 +85,17 @@ namespace DietaEscolar
         {
             usuariosToolStripMenuItem.PerformClick();
         }
+
+        private void planeacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmDistribucion frm = new FrmDistribucion();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void StockBtn_Click(object sender, EventArgs e)
+        {
+            planeacionToolStripMenuItem.PerformClick();
+        }
     }
 }

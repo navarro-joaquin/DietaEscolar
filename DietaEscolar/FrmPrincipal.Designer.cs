@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPrincipal));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +36,7 @@
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.planeacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,10 +52,9 @@
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ItemsBtn = new System.Windows.Forms.ToolStripButton();
             this.UsuariosBtn = new System.Windows.Forms.ToolStripButton();
-            this.EstadoBtn = new System.Windows.Forms.ToolStripButton();
+            this.StockBtn = new System.Windows.Forms.ToolStripButton();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -106,22 +105,29 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // itemsToolStripMenuItem
             // 
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
-            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.itemsToolStripMenuItem.Text = "&Items";
             this.itemsToolStripMenuItem.Click += new System.EventHandler(this.itemsToolStripMenuItem_Click);
             // 
             // planeacionToolStripMenuItem
             // 
             this.planeacionToolStripMenuItem.Name = "planeacionToolStripMenuItem";
-            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.planeacionToolStripMenuItem.Text = "&Estado Items";
+            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.planeacionToolStripMenuItem.Text = "&Stock de Items";
+            this.planeacionToolStripMenuItem.Click += new System.EventHandler(this.planeacionToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "&Reportes";
             // 
             // viewMenu
             // 
@@ -217,7 +223,7 @@
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ItemsBtn,
             this.UsuariosBtn,
-            this.EstadoBtn});
+            this.StockBtn});
             this.toolStrip.Location = new System.Drawing.Point(0, 24);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(632, 25);
@@ -240,16 +246,10 @@
             this.toolStripStatusLabel.Size = new System.Drawing.Size(90, 17);
             this.toolStripStatusLabel.Text = "..: Bienvenido ::.";
             // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "&Reportes";
-            // 
             // ItemsBtn
             // 
             this.ItemsBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ItemsBtn.Image = ((System.Drawing.Image)(resources.GetObject("ItemsBtn.Image")));
+            this.ItemsBtn.Image = global::DietaEscolar.Properties.Resources.breakfast;
             this.ItemsBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.ItemsBtn.Name = "ItemsBtn";
             this.ItemsBtn.Size = new System.Drawing.Size(23, 22);
@@ -259,21 +259,22 @@
             // UsuariosBtn
             // 
             this.UsuariosBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.UsuariosBtn.Image = ((System.Drawing.Image)(resources.GetObject("UsuariosBtn.Image")));
+            this.UsuariosBtn.Image = global::DietaEscolar.Properties.Resources.man;
             this.UsuariosBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.UsuariosBtn.Name = "UsuariosBtn";
             this.UsuariosBtn.Size = new System.Drawing.Size(23, 22);
             this.UsuariosBtn.Text = "Usuarios";
             this.UsuariosBtn.Click += new System.EventHandler(this.UsuariosBtn_Click);
             // 
-            // EstadoBtn
+            // StockBtn
             // 
-            this.EstadoBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.EstadoBtn.Image = ((System.Drawing.Image)(resources.GetObject("EstadoBtn.Image")));
-            this.EstadoBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.EstadoBtn.Name = "EstadoBtn";
-            this.EstadoBtn.Size = new System.Drawing.Size(23, 22);
-            this.EstadoBtn.Text = "Estado Items";
+            this.StockBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.StockBtn.Image = global::DietaEscolar.Properties.Resources.warehouse;
+            this.StockBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StockBtn.Name = "StockBtn";
+            this.StockBtn.Size = new System.Drawing.Size(23, 22);
+            this.StockBtn.Text = "Stock de Items";
+            this.StockBtn.Click += new System.EventHandler(this.StockBtn_Click);
             // 
             // FrmPrincipal
             // 
@@ -326,7 +327,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton ItemsBtn;
         private System.Windows.Forms.ToolStripButton UsuariosBtn;
-        private System.Windows.Forms.ToolStripButton EstadoBtn;
+        private System.Windows.Forms.ToolStripButton StockBtn;
     }
 }
 

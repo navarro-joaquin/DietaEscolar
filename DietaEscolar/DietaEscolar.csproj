@@ -55,6 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_acdDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmDistribucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDistribucion.Designer.cs">
+      <DependentUpon>FrmDistribucion.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDistribucion.resx">
+      <DependentUpon>FrmDistribucion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmItems.resx">
       <DependentUpon>FrmItems.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,6 +141,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\breakfast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\man.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warehouse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
