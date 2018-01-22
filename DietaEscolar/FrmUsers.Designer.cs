@@ -36,39 +36,75 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dgvUsers = new System.Windows.Forms.DataGridView();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.lblBuscar = new System.Windows.Forms.Label();
+            this.dgvUsers = new System.Windows.Forms.DataGridView();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_acdDataSet = new DietaEscolar.bd_acdDataSet();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.grbUsers = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             this.txtId = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.usersTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.usersTableAdapter();
+            this.tableAdapterManager = new DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_acdDataSet = new DietaEscolar.bd_acdDataSet();
-            this.usersTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.usersTableAdapter();
-            this.tableAdapterManager = new DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager();
             lblId = new System.Windows.Forms.Label();
             lblNombre = new System.Windows.Forms.Label();
             lblUsuario = new System.Windows.Forms.Label();
             lblPassword = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
-            this.grbUsers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            this.grbUsers.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblId
+            // 
+            lblId.AutoSize = true;
+            lblId.Location = new System.Drawing.Point(132, 42);
+            lblId.Name = "lblId";
+            lblId.Size = new System.Drawing.Size(32, 18);
+            lblId.TabIndex = 0;
+            lblId.Text = "Nro:";
+            // 
+            // lblNombre
+            // 
+            lblNombre.AutoSize = true;
+            lblNombre.Location = new System.Drawing.Point(132, 79);
+            lblNombre.Name = "lblNombre";
+            lblNombre.Size = new System.Drawing.Size(55, 18);
+            lblNombre.TabIndex = 2;
+            lblNombre.Text = "Nombre:";
+            // 
+            // lblUsuario
+            // 
+            lblUsuario.AutoSize = true;
+            lblUsuario.Location = new System.Drawing.Point(132, 116);
+            lblUsuario.Name = "lblUsuario";
+            lblUsuario.Size = new System.Drawing.Size(53, 18);
+            lblUsuario.TabIndex = 4;
+            lblUsuario.Text = "Usuario:";
+            // 
+            // lblPassword
+            // 
+            lblPassword.AutoSize = true;
+            lblPassword.Location = new System.Drawing.Point(132, 153);
+            lblPassword.Name = "lblPassword";
+            lblPassword.Size = new System.Drawing.Size(62, 18);
+            lblPassword.TabIndex = 6;
+            lblPassword.Text = "Password:";
             // 
             // lblTitulo
             // 
@@ -108,40 +144,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Listado";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.grbUsers);
-            this.tabPage2.Location = new System.Drawing.Point(4, 27);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(733, 320);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Operaciones";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // dgvUsers
-            // 
-            this.dgvUsers.AllowUserToAddRows = false;
-            this.dgvUsers.AllowUserToDeleteRows = false;
-            this.dgvUsers.AutoGenerateColumns = false;
-            this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
-            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4});
-            this.dgvUsers.DataSource = this.usersBindingSource;
-            this.dgvUsers.Location = new System.Drawing.Point(7, 90);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvUsers.Name = "dgvUsers";
-            this.dgvUsers.ReadOnly = true;
-            this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(713, 214);
-            this.dgvUsers.TabIndex = 0;
-            this.dgvUsers.DoubleClick += new System.EventHandler(this.dgvUsers_DoubleClick);
             // 
             // btnEliminar
             // 
@@ -191,6 +193,50 @@
             this.lblBuscar.TabIndex = 6;
             this.lblBuscar.Text = "Nombre:";
             // 
+            // dgvUsers
+            // 
+            this.dgvUsers.AllowUserToAddRows = false;
+            this.dgvUsers.AllowUserToDeleteRows = false;
+            this.dgvUsers.AutoGenerateColumns = false;
+            this.dgvUsers.BackgroundColor = System.Drawing.Color.White;
+            this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dgvUsers.DataSource = this.usersBindingSource;
+            this.dgvUsers.Location = new System.Drawing.Point(7, 90);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvUsers.Name = "dgvUsers";
+            this.dgvUsers.ReadOnly = true;
+            this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUsers.Size = new System.Drawing.Size(713, 214);
+            this.dgvUsers.TabIndex = 0;
+            this.dgvUsers.DoubleClick += new System.EventHandler(this.dgvUsers_DoubleClick);
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "users";
+            this.usersBindingSource.DataSource = this.bd_acdDataSet;
+            // 
+            // bd_acdDataSet
+            // 
+            this.bd_acdDataSet.DataSetName = "bd_acdDataSet";
+            this.bd_acdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.grbUsers);
+            this.tabPage2.Location = new System.Drawing.Point(4, 27);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabPage2.Size = new System.Drawing.Size(733, 320);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Operaciones";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
             // grbUsers
             // 
             this.grbUsers.Controls.Add(this.btnCancelar);
@@ -209,74 +255,6 @@
             this.grbUsers.TabIndex = 0;
             this.grbUsers.TabStop = false;
             this.grbUsers.Text = "Usuarios";
-            // 
-            // lblId
-            // 
-            lblId.AutoSize = true;
-            lblId.Location = new System.Drawing.Point(132, 42);
-            lblId.Name = "lblId";
-            lblId.Size = new System.Drawing.Size(32, 18);
-            lblId.TabIndex = 0;
-            lblId.Text = "Nro:";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(241, 39);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 21);
-            this.txtId.TabIndex = 1;
-            // 
-            // lblNombre
-            // 
-            lblNombre.AutoSize = true;
-            lblNombre.Location = new System.Drawing.Point(132, 79);
-            lblNombre.Name = "lblNombre";
-            lblNombre.Size = new System.Drawing.Size(55, 18);
-            lblNombre.TabIndex = 2;
-            lblNombre.Text = "Nombre:";
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNombre.Location = new System.Drawing.Point(241, 76);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(280, 21);
-            this.txtNombre.TabIndex = 3;
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
-            // 
-            // lblUsuario
-            // 
-            lblUsuario.AutoSize = true;
-            lblUsuario.Location = new System.Drawing.Point(132, 116);
-            lblUsuario.Name = "lblUsuario";
-            lblUsuario.Size = new System.Drawing.Size(53, 18);
-            lblUsuario.TabIndex = 4;
-            lblUsuario.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(241, 113);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(157, 21);
-            this.txtUsuario.TabIndex = 5;
-            // 
-            // lblPassword
-            // 
-            lblPassword.AutoSize = true;
-            lblPassword.Location = new System.Drawing.Point(132, 153);
-            lblPassword.Name = "lblPassword";
-            lblPassword.Size = new System.Drawing.Size(62, 18);
-            lblPassword.TabIndex = 6;
-            lblPassword.Text = "Password:";
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(241, 150);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(157, 21);
-            this.txtPassword.TabIndex = 7;
-            this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
             // 
             // btnCancelar
             // 
@@ -308,6 +286,51 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(241, 39);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 21);
+            this.txtId.TabIndex = 1;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtNombre.Location = new System.Drawing.Point(241, 76);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(280, 21);
+            this.txtNombre.TabIndex = 3;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(241, 113);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(157, 21);
+            this.txtUsuario.TabIndex = 5;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(241, 150);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(157, 21);
+            this.txtPassword.TabIndex = 7;
+            this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.dia_actualTableAdapter = null;
+            this.tableAdapterManager.itemsTableAdapter = null;
+            this.tableAdapterManager.planeacionTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
@@ -338,29 +361,8 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Password";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
             this.dataGridViewTextBoxColumn4.Width = 120;
-            // 
-            // usersBindingSource
-            // 
-            this.usersBindingSource.DataMember = "users";
-            this.usersBindingSource.DataSource = this.bd_acdDataSet;
-            // 
-            // bd_acdDataSet
-            // 
-            this.bd_acdDataSet.DataSetName = "bd_acdDataSet";
-            this.bd_acdDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usersTableAdapter
-            // 
-            this.usersTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.itemsTableAdapter = null;
-            this.tableAdapterManager.planeacionTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.usersTableAdapter = this.usersTableAdapter;
             // 
             // FrmUsers
             // 
@@ -377,12 +379,12 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
-            this.grbUsers.ResumeLayout(false);
-            this.grbUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.grbUsers.ResumeLayout(false);
+            this.grbUsers.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,10 +401,6 @@
         private bd_acdDataSetTableAdapters.usersTableAdapter usersTableAdapter;
         private bd_acdDataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.DataGridView dgvUsers;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtBuscar;
@@ -414,5 +412,9 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
     }
 }

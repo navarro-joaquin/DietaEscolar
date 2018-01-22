@@ -14,14 +14,14 @@ using System.Configuration;
 
 namespace DietaEscolar
 {
-    public partial class FrmReporteGeneral : Form
+    public partial class FrmReporteNivelSecundaria : Form
     {
-        public FrmReporteGeneral()
+        public FrmReporteNivelSecundaria()
         {
             InitializeComponent();
         }
 
-        private void FrmReporteGeneral_Load(object sender, EventArgs e)
+        private void FrmReporteNivelSecundaria_Load(object sender, EventArgs e)
         {
             consultasDataSet dataset = new consultasDataSet();
             string ConnectionString = ConfigurationManager.ConnectionStrings["DietaEscolar.Properties.Settings.bd_acdCS"].ConnectionString;
@@ -29,7 +29,7 @@ namespace DietaEscolar
             conn.ConnectionString = ConnectionString;
             conn.Open();
 
-            string consulta = "SELECT `nombre`, `dia_semana`, `nro_dias`, `nivel`, `estado`, `fecha` FROM `vista_planeacion` ORDER BY FIELD (`nivel`, 'INICIAL Y PRIMARIA', 'SECUNDARIA', 'ALTERNATIVA Y CONVENIO')";
+            string consulta = "SELECT `nombre`, `dia_semana`, `nro_dias`, `nivel`, `estado`, `fecha` FROM `vista_planeacion` WHERE `nivel` LIKE 'SECUNDARIA' ORDER BY FIELD (`dia_semana`, 'LUNES', 'MARTES', 'MIERCOLES', 'JUEVES', 'VIERNES')";
 
             MySqlCommand cmd = new MySqlCommand();
             MySqlDataAdapter adapter = new MySqlDataAdapter(consulta, ConnectionString);
@@ -41,7 +41,7 @@ namespace DietaEscolar
             reportViewer1.LocalReport.Refresh();
 
             conn.Close();
-            
+
             this.reportViewer1.RefreshReport();
         }
     }

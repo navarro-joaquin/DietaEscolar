@@ -1,6 +1,6 @@
 ﻿namespace DietaEscolar
 {
-    partial class FrmReporteGeneral
+    partial class FrmReporteNivelInicial
     {
         /// <summary>
         /// Required designer variable.
@@ -53,14 +53,14 @@
             reportDataSource1.Name = "Consulta";
             reportDataSource1.Value = this.BusquedaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DietaEscolar.ReporteGeneral.rdlc";
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "DietaEscolar.ReporteNivelInicial.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(852, 372);
             this.reportViewer1.TabIndex = 0;
             // 
-            // FrmReporteGeneral
+            // FrmReporteNivelInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -68,9 +68,9 @@
             this.Controls.Add(this.reportViewer1);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "FrmReporteGeneral";
-            this.Text = ".::. Reporte de Stock en General .::.";
-            this.Load += new System.EventHandler(this.FrmReporteGeneral_Load);
+            this.Name = "FrmReporteNivelInicial";
+            this.Text = ".::. Reporte de Stock en Nivel Inicial y Primaria .::.";
+            this.Load += new System.EventHandler(this.FrmReporteNivelInicial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.BusquedaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.consultasDataSet)).EndInit();
             this.ResumeLayout(false);

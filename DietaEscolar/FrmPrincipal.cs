@@ -104,5 +104,26 @@ namespace DietaEscolar
             reporteGeneral.MdiParent = this;
             reporteGeneral.Show();
         }
+
+        private void inicialYPrimariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteNivelInicial reporte = new FrmReporteNivelInicial();
+            reporte.MdiParent = this;
+            reporte.Show();
+        }
+
+        private void secundariaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteNivelSecundaria reporte = new FrmReporteNivelSecundaria();
+            reporte.MdiParent = this;
+            reporte.Show();
+        }
+
+        private void alternativaYConvenioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReporteNivelAlternativa reporte = new FrmReporteNivelAlternativa();
+            reporte.MdiParent = this;
+            reporte.Show();
+        }
     }
 }

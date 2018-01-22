@@ -32,6 +32,11 @@
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.operacionesMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.generalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inicialYPrimariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.secundariaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alternativaYConvenioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.toolBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusBarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +69,7 @@
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileMenu,
             this.operacionesMenu,
+            this.reportesToolStripMenuItem,
             this.viewMenu,
             this.windowsMenu,
             this.helpMenu});
@@ -92,6 +98,49 @@
             this.operacionesMenu.Name = "operacionesMenu";
             this.operacionesMenu.Size = new System.Drawing.Size(85, 20);
             this.operacionesMenu.Text = "&Operaciones";
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.generalToolStripMenuItem,
+            this.inicialYPrimariaToolStripMenuItem,
+            this.secundariaToolStripMenuItem,
+            this.alternativaYConvenioToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "&Reportes";
+            // 
+            // generalToolStripMenuItem
+            // 
+            this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
+            this.generalToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D1)));
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.generalToolStripMenuItem.Text = "&General";
+            this.generalToolStripMenuItem.Click += new System.EventHandler(this.generalToolStripMenuItem_Click);
+            // 
+            // inicialYPrimariaToolStripMenuItem
+            // 
+            this.inicialYPrimariaToolStripMenuItem.Name = "inicialYPrimariaToolStripMenuItem";
+            this.inicialYPrimariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D2)));
+            this.inicialYPrimariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.inicialYPrimariaToolStripMenuItem.Text = "&Inicial y Primaria";
+            this.inicialYPrimariaToolStripMenuItem.Click += new System.EventHandler(this.inicialYPrimariaToolStripMenuItem_Click);
+            // 
+            // secundariaToolStripMenuItem
+            // 
+            this.secundariaToolStripMenuItem.Name = "secundariaToolStripMenuItem";
+            this.secundariaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D3)));
+            this.secundariaToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.secundariaToolStripMenuItem.Text = "&Secundaria";
+            this.secundariaToolStripMenuItem.Click += new System.EventHandler(this.secundariaToolStripMenuItem_Click);
+            // 
+            // alternativaYConvenioToolStripMenuItem
+            // 
+            this.alternativaYConvenioToolStripMenuItem.Name = "alternativaYConvenioToolStripMenuItem";
+            this.alternativaYConvenioToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D4)));
+            this.alternativaYConvenioToolStripMenuItem.Size = new System.Drawing.Size(234, 22);
+            this.alternativaYConvenioToolStripMenuItem.Text = "&Alternativa y Convenio";
+            this.alternativaYConvenioToolStripMenuItem.Click += new System.EventHandler(this.alternativaYConvenioToolStripMenuItem_Click);
             // 
             // viewMenu
             // 
@@ -244,7 +293,8 @@
             // 
             this.exitToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.exit__1_;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.exitToolStripMenuItem.Text = "&Salir";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolsStripMenuItem_Click);
             // 
@@ -252,7 +302,8 @@
             // 
             this.usuariosToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.man;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.usuariosToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D1)));
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.usuariosToolStripMenuItem.Text = "&Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -260,7 +311,8 @@
             // 
             this.itemsToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.breakfast;
             this.itemsToolStripMenuItem.Name = "itemsToolStripMenuItem";
-            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.itemsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D2)));
+            this.itemsToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.itemsToolStripMenuItem.Text = "&Items";
             this.itemsToolStripMenuItem.Click += new System.EventHandler(this.itemsToolStripMenuItem_Click);
             // 
@@ -268,7 +320,8 @@
             // 
             this.planeacionToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.warehouse;
             this.planeacionToolStripMenuItem.Name = "planeacionToolStripMenuItem";
-            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
+            this.planeacionToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.D3)));
+            this.planeacionToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.planeacionToolStripMenuItem.Text = "&Stock de Items";
             this.planeacionToolStripMenuItem.Click += new System.EventHandler(this.planeacionToolStripMenuItem_Click);
             // 
@@ -323,6 +376,11 @@
         private System.Windows.Forms.ToolStripButton ItemsBtn;
         private System.Windows.Forms.ToolStripButton UsuariosBtn;
         private System.Windows.Forms.ToolStripButton StockBtn;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem inicialYPrimariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem secundariaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alternativaYConvenioToolStripMenuItem;
     }
 }
 

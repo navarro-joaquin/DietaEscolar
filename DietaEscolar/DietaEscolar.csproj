@@ -109,6 +109,24 @@
     <Compile Include="FrmReporteGeneral.Designer.cs">
       <DependentUpon>FrmReporteGeneral.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmReporteNivelAlternativa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteNivelAlternativa.Designer.cs">
+      <DependentUpon>FrmReporteNivelAlternativa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteNivelInicial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteNivelInicial.Designer.cs">
+      <DependentUpon>FrmReporteNivelInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReporteNivelSecundaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReporteNivelSecundaria.Designer.cs">
+      <DependentUpon>FrmReporteNivelSecundaria.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +151,15 @@
     <EmbeddedResource Include="FrmReporteGeneral.resx">
       <DependentUpon>FrmReporteGeneral.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteNivelAlternativa.resx">
+      <DependentUpon>FrmReporteNivelAlternativa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteNivelInicial.resx">
+      <DependentUpon>FrmReporteNivelInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReporteNivelSecundaria.resx">
+      <DependentUpon>FrmReporteNivelSecundaria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>
     </EmbeddedResource>
@@ -147,6 +174,9 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="ReporteGeneral.rdlc" />
+    <EmbeddedResource Include="ReporteNivelAlternativa.rdlc" />
+    <EmbeddedResource Include="ReporteNivelInicial.rdlc" />
+    <EmbeddedResource Include="ReporteNivelSecundaria.rdlc" />
     <None Include="bd_acdDataSet.xsc">
       <DependentUpon>bd_acdDataSet.xsd</DependentUpon>
     </None>

@@ -9,7 +9,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Reporte de Stock en General</Value>
+                <Value>Reporte de Stock en Nivel Inicial y Primaria</Value>
                 <Style>
                   <FontFamily>trebuchet MS</FontFamily>
                   <FontSize>18pt</FontSize>
@@ -22,6 +22,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Left>0.00001cm</Left>
         <Height>1.07307cm</Height>
         <Width>21.80167cm</Width>
         <Style>
@@ -36,6 +37,7 @@
       </Textbox>
       <Line Name="Line1">
         <Top>1.07307cm</Top>
+        <Left>0.00001cm</Left>
         <Height>0cm</Height>
         <Width>21.80167cm</Width>
         <ZIndex>1</ZIndex>
@@ -630,6 +632,7 @@
         </TablixRowHierarchy>
         <DataSetName>Consulta</DataSetName>
         <Top>1.24946cm</Top>
+        <Left>0.00001cm</Left>
         <Height>2.77542cm</Height>
         <Width>21.80166cm</Width>
         <ZIndex>2</ZIndex>
@@ -640,10 +643,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.96875in</Height>
+    <Height>2.60417in</Height>
     <Style />
   </Body>
-  <Width>8.60417in</Width>
+  <Width>8.58334in</Width>
   <Page>
     <PageHeight>21.59cm</PageHeight>
     <PageWidth>27.94cm</PageWidth>
@@ -661,7 +664,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3fa0919a-00a1-4d8a-8bbc-0e4c3390a05e</rd:DataSourceID>
+      <rd:DataSourceID>c5370f7d-017a-4a48-b05a-d5e0d7464410</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -711,5 +714,5 @@
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>34c5d15d-8b2a-4c49-8ac1-f55357687df1</rd:ReportID>
+  <rd:ReportID>ca10d502-cc6a-42b0-b328-70a6b26b990c</rd:ReportID>
 </Report>
