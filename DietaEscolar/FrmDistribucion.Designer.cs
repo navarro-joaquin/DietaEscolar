@@ -42,7 +42,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.dgvStock = new System.Windows.Forms.DataGridView();
             this.vista_planeacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_acdDataSet = new DietaEscolar.bd_acdDataSet();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -56,17 +55,19 @@
             this.cmbDiaSemana = new System.Windows.Forms.ComboBox();
             this.txtNroDias = new System.Windows.Forms.TextBox();
             this.chkEstado = new System.Windows.Forms.CheckBox();
-            this.vista_planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.vista_planeacionTableAdapter();
             this.tableAdapterManager = new DietaEscolar.bd_acdDataSetTableAdapters.TableAdapterManager();
             this.planeacionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.planeacionTableAdapter();
             this.itemsTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.itemsTableAdapter();
+            this.vista_planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.vista_planeacionTableAdapter();
+            this.dgvStock = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.planeacionTableAdapter = new DietaEscolar.bd_acdDataSetTableAdapters.planeacionTableAdapter();
             lblId = new System.Windows.Forms.Label();
             lblIdItem = new System.Windows.Forms.Label();
             lblNivel = new System.Windows.Forms.Label();
@@ -75,13 +76,13 @@
             lblEstado = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista_planeacionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.grbStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.planeacionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).BeginInit();
             this.SuspendLayout();
             // 
             // lblId
@@ -162,11 +163,11 @@
             // tabPage1
             // 
             this.tabPage1.AutoScroll = true;
+            this.tabPage1.Controls.Add(this.dgvStock);
             this.tabPage1.Controls.Add(this.cmbBuscar);
             this.tabPage1.Controls.Add(this.btnEliminar);
             this.tabPage1.Controls.Add(this.btnBuscar);
             this.tabPage1.Controls.Add(this.txtBuscar);
-            this.tabPage1.Controls.Add(this.dgvStock);
             this.tabPage1.Location = new System.Drawing.Point(4, 27);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -226,29 +227,6 @@
             this.txtBuscar.Size = new System.Drawing.Size(211, 21);
             this.txtBuscar.TabIndex = 11;
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            // 
-            // dgvStock
-            // 
-            this.dgvStock.AllowUserToAddRows = false;
-            this.dgvStock.AllowUserToDeleteRows = false;
-            this.dgvStock.AutoGenerateColumns = false;
-            this.dgvStock.BackgroundColor = System.Drawing.Color.White;
-            this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.dgvStock.DataSource = this.vista_planeacionBindingSource;
-            this.dgvStock.Location = new System.Drawing.Point(6, 69);
-            this.dgvStock.Name = "dgvStock";
-            this.dgvStock.ReadOnly = true;
-            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvStock.Size = new System.Drawing.Size(642, 220);
-            this.dgvStock.TabIndex = 0;
-            this.dgvStock.DoubleClick += new System.EventHandler(this.dgvStock_DoubleClick);
             // 
             // vista_planeacionBindingSource
             // 
@@ -390,10 +368,6 @@
             this.chkEstado.TabIndex = 11;
             this.chkEstado.UseVisualStyleBackColor = true;
             // 
-            // vista_planeacionTableAdapter
-            // 
-            this.vista_planeacionTableAdapter.ClearBeforeFill = true;
-            // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
@@ -408,13 +382,37 @@
             this.planeacionBindingSource.DataMember = "planeacion";
             this.planeacionBindingSource.DataSource = this.bd_acdDataSet;
             // 
-            // planeacionTableAdapter
-            // 
-            this.planeacionTableAdapter.ClearBeforeFill = true;
-            // 
             // itemsTableAdapter
             // 
             this.itemsTableAdapter.ClearBeforeFill = true;
+            // 
+            // vista_planeacionTableAdapter
+            // 
+            this.vista_planeacionTableAdapter.ClearBeforeFill = true;
+            // 
+            // dgvStock
+            // 
+            this.dgvStock.AllowUserToAddRows = false;
+            this.dgvStock.AllowUserToDeleteRows = false;
+            this.dgvStock.AutoGenerateColumns = false;
+            this.dgvStock.BackgroundColor = System.Drawing.Color.White;
+            this.dgvStock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7});
+            this.dgvStock.DataSource = this.vista_planeacionBindingSource;
+            this.dgvStock.Location = new System.Drawing.Point(6, 66);
+            this.dgvStock.Name = "dgvStock";
+            this.dgvStock.ReadOnly = true;
+            this.dgvStock.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvStock.Size = new System.Drawing.Size(642, 220);
+            this.dgvStock.TabIndex = 13;
+            this.dgvStock.DoubleClick += new System.EventHandler(this.dgvStock_DoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -438,7 +436,7 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Día";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 70;
+            this.dataGridViewTextBoxColumn3.Width = 90;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -453,7 +451,6 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Nivel";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            this.dataGridViewTextBoxColumn5.Width = 150;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -463,11 +460,22 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Width = 50;
             // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "fecha";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Fecha";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // planeacionTableAdapter
+            // 
+            this.planeacionTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmDistribucion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(691, 392);
+            this.ClientSize = new System.Drawing.Size(699, 400);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitulo);
             this.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -478,7 +486,6 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vista_planeacionBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_acdDataSet)).EndInit();
             this.tabPage2.ResumeLayout(false);
@@ -486,6 +493,7 @@
             this.grbStock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.planeacionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStock)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -499,12 +507,9 @@
         private System.Windows.Forms.TabPage tabPage2;
         private bd_acdDataSet bd_acdDataSet;
         private System.Windows.Forms.BindingSource vista_planeacionBindingSource;
-        private bd_acdDataSetTableAdapters.vista_planeacionTableAdapter vista_planeacionTableAdapter;
         private bd_acdDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView dgvStock;
         private System.Windows.Forms.GroupBox grbStock;
         private System.Windows.Forms.BindingSource planeacionBindingSource;
-        private bd_acdDataSetTableAdapters.planeacionTableAdapter planeacionTableAdapter;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.ComboBox cmbIdItem;
         private System.Windows.Forms.ComboBox cmbDiaSemana;
@@ -519,11 +524,15 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cmbNivel;
+        private System.Windows.Forms.DataGridView dgvStock;
+        private bd_acdDataSetTableAdapters.vista_planeacionTableAdapter vista_planeacionTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private bd_acdDataSetTableAdapters.planeacionTableAdapter planeacionTableAdapter;
     }
 }

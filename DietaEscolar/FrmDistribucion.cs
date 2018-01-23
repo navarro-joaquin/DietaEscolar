@@ -14,9 +14,47 @@ namespace DietaEscolar
     {
         private bool Editar = false;
 
+        string dia_actual = DateTime.Now.DayOfWeek.ToString().ToUpper();
+
         public FrmDistribucion()
         {
             InitializeComponent();
+        }
+
+        private void ActualizarStock()
+        {
+            string dia = "DOMINGO";
+
+            switch (dia_actual)
+            {
+                case "Monday":
+                    dia = "LUNES";
+                    break;
+                case "Tuesday":
+                    dia = "MARTES";
+                    break;
+                case "Wednesday":
+                    dia = "MIERCOLES";
+                    break;
+                case "Thursday":
+                    dia = "JUEVES";
+                    break;
+                case "Friday":
+                    dia = "VIERNES";
+                    break;
+                default:
+                    dia = "SABADO";
+                    break;
+            }
+
+            try
+            {
+                this.planeacionTableAdapter.ActualizarStock(dia);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Limpiar()
@@ -68,6 +106,8 @@ namespace DietaEscolar
 
             cmbBuscar.SelectedIndex = 0;
             txtId.ReadOnly = true;
+
+            MessageBox.Show(dia_actual);
         }
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
@@ -116,7 +156,7 @@ namespace DietaEscolar
                         int id_existente = Convert.ToInt32(planeacionTableAdapter.BuscarDuplicados(id_item, nivel, semana, nro_dias, estado));
                         if (id_existente == 0)
                         {
-                            planeacionTableAdapter.InsertarStock(id_item, nivel, semana, nro_dias, estado);
+                            planeacionTableAdapter.InsertarStock(id_item, nivel, semana, nro_dias, estado, DateTime.Now);
                             MessageBox.Show("Item insertado correctamente", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
