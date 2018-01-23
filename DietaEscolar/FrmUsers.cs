@@ -94,7 +94,7 @@ namespace DietaEscolar
                         if (id_existente == 0)
                         {
                             usersTableAdapter.InsertarUsuario(nombre, usuario, password);
-                            MessageBox.Show("Item insertado correctamente", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Usuario insertado correctamente", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -166,7 +166,7 @@ namespace DietaEscolar
                         usersTableAdapter.EliminarUsuario(id);
                     }
 
-                    MessageBox.Show(nro_filas + " items eliminados correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(nro_filas + " usuarios eliminados correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     usersTableAdapter.Fill(this.bd_acdDataSet.users);
                 }
                 catch (Exception ex)

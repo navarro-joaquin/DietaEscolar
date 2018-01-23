@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -130,6 +131,12 @@ namespace DietaEscolar
             FrmReporteNivelAlternativa reporte = new FrmReporteNivelAlternativa();
             reporte.MdiParent = this;
             reporte.Show();
+        }
+
+        private void manualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string pdfPath = Path.Combine(Application.StartupPath, "Manual.pdf");
+            System.Diagnostics.Process.Start(pdfPath);
         }
     }
 }

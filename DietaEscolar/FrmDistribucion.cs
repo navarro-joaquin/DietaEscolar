@@ -196,7 +196,7 @@ namespace DietaEscolar
                         if (id_existente == 0)
                         {
                             planeacionTableAdapter.InsertarStock(id_item, nivel, semana, nro_dias, estado, DateTime.Now);
-                            MessageBox.Show("Item insertado correctamente", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Programación insertada correctamente", "Insertar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
@@ -270,7 +270,7 @@ namespace DietaEscolar
                         planeacionTableAdapter.EliminarStock(id);
                     }
 
-                    MessageBox.Show(nro_filas + " items eliminados correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show(nro_filas + " entradas eliminadas correctamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     vista_planeacionTableAdapter.Fill(this.bd_acdDataSet.vista_planeacion);
                 }
                 catch (Exception ex)

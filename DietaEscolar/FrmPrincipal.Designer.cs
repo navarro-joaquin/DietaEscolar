@@ -57,8 +57,7 @@
             this.tileHorizontalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAllToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpMenu = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.toolStrip.SuspendLayout();
             this.statusStrip.SuspendLayout();
@@ -320,24 +319,20 @@
             // helpMenu
             // 
             this.helpMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ayudaToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.manualToolStripMenuItem});
             this.helpMenu.Image = global::DietaEscolar.Properties.Resources.info;
             this.helpMenu.Name = "helpMenu";
             this.helpMenu.Size = new System.Drawing.Size(69, 20);
             this.helpMenu.Text = "Ay&uda";
             // 
-            // ayudaToolStripMenuItem
+            // manualToolStripMenuItem
             // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
-            // aboutToolStripMenuItem
-            // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
-            this.aboutToolStripMenuItem.Text = "&Acerca de... ...";
+            this.manualToolStripMenuItem.Image = global::DietaEscolar.Properties.Resources.pdf;
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1;
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.manualToolStripMenuItem.Text = "&Manual de Usuario";
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.manualToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -369,7 +364,6 @@
         private System.Windows.Forms.ToolStrip toolStrip;
         private System.Windows.Forms.StatusStrip statusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tileHorizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fileMenu;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
@@ -382,7 +376,7 @@
         private System.Windows.Forms.ToolStripMenuItem closeAllToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpMenu;
         private System.Windows.Forms.ToolTip toolTip;
-        private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem operacionesMenu;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemsToolStripMenuItem;

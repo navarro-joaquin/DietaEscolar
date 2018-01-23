@@ -7,7 +7,7 @@
     <ProjectGuid>{FE610B9B-4613-4696-B9B8-B604D54329F5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>DietaEscolar</RootNamespace>
-    <AssemblyName>DietaEscolar</AssemblyName>
+    <AssemblyName>GestionPACD</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -30,6 +30,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Apathae-Wren-Applications.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
@@ -199,6 +202,9 @@
     <None Include="consultasDataSet.xss">
       <DependentUpon>consultasDataSet.xsd</DependentUpon>
     </None>
+    <None Include="Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -245,6 +251,8 @@
     <None Include="Resources\curriculum.png" />
     <None Include="Resources\analytics %281%29.png" />
     <None Include="Resources\analytics %282%29.png" />
+    <Content Include="Apathae-Wren-Applications.ico" />
+    <None Include="Resources\pdf.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
